@@ -1,8 +1,11 @@
+ 
+
 
 const FooterComponent = () => {
     return (
 <>
-  hola
+<button className="btn btn-warning">Footer</button>
+
   
   
 </>
