@@ -1,10 +1,13 @@
 import { Nav, Navbar, Button, Form, FormControl, Dropdown, NavItem, NavLink} from 'react-bootstrap';
+import CartWidget from '../carts/CartWidget';
+
 
 const NavbarComponent = () => {
   return (
     <>
-      <Navbar bg="dark" variant="dark">
+      <Navbar bg="dark" variant="dark">        
         <Navbar.Brand href="#home">Nombre</Navbar.Brand>
+        <Navbar.Brand href="#home">Titulo</Navbar.Brand>
         <Nav className="mr-auto">
           <Nav.Link href="#home">Categoria 1</Nav.Link>
           <Nav.Link href="#features">Categoria 2</Nav.Link>
@@ -22,8 +25,9 @@ const NavbarComponent = () => {
             <Dropdown.Item>Productos 3</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>;
+        <CartWidget />
       </Navbar>
-
+      
     </>
   );
 }
