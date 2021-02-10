@@ -5,6 +5,7 @@ import NavbarComponent from './components/navbar';
 import FooterComponent from './components/footer';
 import ItemListContainer from './components/containers/ItenListContainer';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import ItemCount from './components/count/ItemCount';
 
 
 const App = () => {
@@ -13,8 +14,11 @@ const App = () => {
       <BrowserRouter>
         <NavbarComponent />
         <ItemListContainer greeting={"Nuestros productos"} />
+        <ItemCount />
         <Switch>
           <Route exact path="/">
+               
+
 
 
 
