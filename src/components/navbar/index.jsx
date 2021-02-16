@@ -1,5 +1,5 @@
 import { Nav, Navbar, Button, Form, FormControl, Dropdown, NavItem, NavLink} from 'react-bootstrap';
-import CartWidget from '../carts/CartWidget';
+import CartWidget from '../CartWidget/CartWidget';
 
 
 const NavbarComponent = () => {

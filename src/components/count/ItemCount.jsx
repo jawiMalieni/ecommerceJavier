@@ -1,13 +1,13 @@
 import React, {useState} from 'react';
-import AddButton from '../AddButton';
-const ItemCount = (props) => {
 
-    const [count, setCount] = useState('1');
+const ItemCount = ({stock,initial}) => {
+
+    const [count, setCount] = useState(initial);
 
     function onAdd(sign) {
-        if ((sign === '+') && (count < props.max)) {
+        if (sign === '+' && count < stock) {
             setCount(count+1);
-        } else if ((sign === '-') && (count > props.min)) {
+        } else if (sign === '-' && count > initial) {
             setCount(count-1);
         } 
     }
@@ -18,9 +18,8 @@ const ItemCount = (props) => {
             <button className="btn" onClick={() => onAdd('-')}> - </button> 
             <p className="count"> {count} </p>
             <button className="btn" onClick={() => onAdd('+')}> + </button>
-          </div>
-          <AddButton itemCount={count} imagen={props.imagen} title={props.title} price={props.price}/>
-        </div>       
+          </div> 
+        </div>  
     );
 }
 export default ItemCount;
