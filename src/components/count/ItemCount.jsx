@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import AddButton from '../AddButton/AddButton';
+import AddButton from '../AddButton';
 const ItemCount = (props) => {
 
-    const [count, setCount] = useState(1);
+    const [count, setCount] = useState('1');
 
     function onAdd(sign) {
         if ((sign === '+') && (count < props.max)) {
