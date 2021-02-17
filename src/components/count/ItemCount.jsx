@@ -15,10 +15,11 @@ const ItemCount = ({stock,initial}) => {
     return (
         <div>
           <div className="counter-container d-flex flex-row justify-content-around align-items-center shadow mt-3">
-            <button className="btn" onClick={() => onAdd('-')}> - </button> 
+            <button className="btn" onClick={() => ('-')}> - </button> 
             <p className="count"> {count} </p>
-            <button className="btn" onClick={() => onAdd('+')}> + </button>
+            <button className="btn" onClick={() => ('+')}> + </button>
           </div> 
+            <button className="btn" onClick={onAdd}>Agregar al carrito</button>
         </div>  
     );
 }
