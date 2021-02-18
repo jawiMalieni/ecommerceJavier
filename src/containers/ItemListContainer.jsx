@@ -1,5 +1,5 @@
 import * as React from "react";
-import ItemList from "../containers/ItenListContainer";
+import ItemList from "../containers/ItemListContainer";
 import productList from "../mocks/productsList";
 
 const ItemListContainer = ({ greeting }) => {
