@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavbarComponent from './components/navbar';
@@ -13,7 +13,7 @@ const App = () => {
     <>
       <BrowserRouter>
         <NavbarComponent />
-        <ItemListContainer greeting={"Nuestros productos"} />
+        
         <ItemCount />
         <Switch>
           <Route exact path="/">

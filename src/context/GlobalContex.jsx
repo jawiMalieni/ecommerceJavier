@@ -1,4 +1,4 @@
+import { createContext} from "react";
 
-import { GlobalContext} from "react";
-
+// creamos espacio de momoria
 export GlobalContext = createContext();
