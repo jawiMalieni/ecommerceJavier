@@ -10,13 +10,15 @@ const ItemCount = ({stock,initial, onAdd}) => {
         } else if (sign === '-' && count > initial) {
             setCount(count-1);
         } 
-    }
-    
+    };
+     const handlerOnAdd= () =>{
+         onAdd(count)
+     }
     return (
         <div>
             <ButtonGroup className="mb-2">
               <Button onClick={() => ('-')}> - </Button>
-              <Button onClick={onAdd}>Agregar al carrito</Button>
+              <Button onClick={handlerOnAdd}>Agregar al carrito</Button>
               <Button onClick={() => ('+')}> + </Button>
             </ButtonGroup>
         </div>       

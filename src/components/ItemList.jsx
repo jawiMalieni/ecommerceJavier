@@ -1,4 +1,5 @@
-import Item from "../Item/Item";
+import React, { useState, useEffect } from "react";
+import Item from "./Item";
 
 const ItemList = ({ products }) => {
     return (

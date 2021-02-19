@@ -1,33 +1,29 @@
-//import * as React from "react";
-//import ItemList from "../containers/ItemListContainer";
-//import productList from "../mocks/productsList";
+import React, { useState, useEffect } from "react";
+import ItemCount from "../components/ItemCount";
+import productList from "../mocks/productsList";
+import ItemList from "../components/ItemList";
 
-//const ItemListContainer = ({ greeting }) => {
+const ItemListContainer = ({ greeting }) => {
     
-    //const [products, setProducts] = React.useState([])
+    const [products, setProducts] = useState([]);
     
-    //React.useEffect(() => {
-  //      const myPromise = new Promise((resolve, reject) => {
- //           setTimeout(() => { resolve(productList) }, 3000);
- //       });
+    useEffect(() => {
+        const myPromise = new Promise((resolve, reject) => {
+            setTimeout(() => { resolve(productList) }, 3000);
+        });
 
- //       myPromise.then((result) => setProducts(result));
-  //  }, []);
+        myPromise.then((result) => setProducts(result));
+    }, []);
 
+    return (
+        <div>
+        <a className="h1">{greeting}</a>
+       <ItemList products={products} />
+       
+       <ItemCount />
+       
+       </div>
+    );
+}
+export default ItemListContainer;
 
-
-
-
-
-
-
-  //  return (
-  //      <div>
-  //      <a className="h1">{greeting}</a>
- //       <ItemList products={products} />
-  //      </div>
-  //  );
-//}
-//export default ItemListContainer;
-
-//<ItemListContainer greeting={"Nuestros productos"} />
