@@ -4,9 +4,9 @@ const MainImage = () => {
     return (
         <div className='col-12 home_container text-center'>
             <h2>
-                No importa que
+                Tenemos todo
                 <br></br>
-                lo tenemos cubierto
+                lo que buscas
             </h2>
         </div>
     );
