@@ -1,16 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Item from "./Item";
 
-const ItemList = ({ products }) => {
-    return (
-        <div>
-
-            {products.map((product) => {
-                return <Item key={product.id} product={product} />;
-            })}
-
-        </div>
-    );
+const listProducts = [{ id: 1, name:""}, { id: 2, name: "" }];
+const ItemList = () => {
+  return (
+    <>
+      <div>
+        {listProducts.map(product => (
+          <Item key={product.id} product={product} />
+        ))}
+      </div>
+    </>
+  );
 };
 
-export default ItemList
+export default ItemList;

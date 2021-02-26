@@ -1,27 +1,29 @@
 import React, {useState} from 'react';
-import { ButtonGroup, Button} from 'react-bootstrap';
-const ItemCount = ({stock,initial, onAdd}) => {
+import AddButton from './AddButton';
 
-    const [count, setCount] = useState(initial);
+const ItemCount = (props) => {
+
+    const [count, setCount] = useState(1);
 
     function onAdd(sign) {
-        if (sign === '+' && count < stock) {
+        if ((sign === '+') && (count < props.max)) {
             setCount(count+1);
-        } else if (sign === '-' && count > initial) {
+        } else if ((sign === '-') && (count > props.min)) {
             setCount(count-1);
         } 
-    };
-     const handlerOnAdd= () =>{
-         onAdd(count)
-     }
+    }
+    
+
     return (
         <div>
-            <ButtonGroup className="mb-2">
-              <Button onClick={() => ('-')}> - </Button>
-              <Button onClick={handlerOnAdd}>Agregar al carrito</Button>
-              <Button onClick={() => ('+')}> + </Button>
-            </ButtonGroup>
-        </div>       
+          <div className="counter-container d-flex flex-row justify-content-around align-items-center shadow mt-3">
+            <button className="btn" onClick={() => onAdd('-')}> - </button> 
+            <p className="count"> {count} </p>
+            <button className="btn" onClick={() => onAdd('+')}> + </button>
+          </div>
+          <AddButton itemCount={count} imagen={props.imagen} title={props.title} price={props.price}/>
+        </div>
     );
 }
+
 export default ItemCount;

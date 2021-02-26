@@ -1,22 +1,22 @@
 import React from 'react';
 import { useContext } from 'react';
-import { Context } from '';
+import { Context } from '../Context/CartContext';
 
-const AddButton = ({ click, itemCount, imagen, price, title }) => {
+const AddButton = ({ click, itemCount, image, price, title }) => {
 
     const [selectedItems, setSelectedItems] = useContext(Context);
     
     const handleClick = () => {
         setSelectedItems([...selectedItems, {
             title : title,
-            imagen: imagen, 
+            image: image, 
             price: price,
             inCart: itemCount,
         }])
     } 
     
     return (
-        <button type="button" className="mt-3 mx-auto Add-button" onClick={() => handleClick()}>Agregar {itemCount}</button>
+        <button type="button" onClick={() => handleClick()}>Agregar {itemCount}</button>
     );
 }
 
