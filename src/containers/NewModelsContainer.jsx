@@ -1,5 +1,5 @@
 import React from 'react';
-import NewModels from '../Components/NewModels';
+import NewModels from '../components/NewModels';
 
 const NewModelsContainer = () => {
     return (

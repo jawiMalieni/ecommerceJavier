@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import Item from '../Components/Item';
+import Item from '../components/Item';
 import { getFirestore } from '../firebase/firebase';
 
 const ItemListContainer = () => {

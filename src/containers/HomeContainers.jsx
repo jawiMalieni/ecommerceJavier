@@ -1,6 +1,6 @@
 import React from 'react';
-import Home from './Components/Home';
-import BrandsContainer from './Containers/BrandsContainer';
+import Home from '../components/Home';
+import BrandsContainer from '../containers/BrandsContainer';
 import NewModelsContainer from './NewModelsContainer';
 
 

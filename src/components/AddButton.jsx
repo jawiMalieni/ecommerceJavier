@@ -1,6 +1,6 @@
 import React from 'react';
 import { useContext } from 'react';
-import { Context } from '../Context/CartContext';
+import { Context } from '../Context/CartContex';
 
 const AddButton = ({ click, itemCount, image, price, title }) => {
 

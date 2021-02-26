@@ -8,15 +8,15 @@ import FooterComponent from './components/Footer';
 import ItemListContainer from './containers/ItemListContainer';
 
 import {Switch , Route, BrowserRouter} from 'react-router-dom';
-import NavBar from './Components/NavBar';
-import Home from './Components/Home';
+import NavBar from './components/NavBar';
+import Home from './components/Home';
 import { useState } from 'react';
 import { Fragment } from 'react';
-import HomeContainer from './Containers/HomeContainers';
-import ShopContainer from './Containers/ShopContainer';
-import ItemDetailContainer from './Containers/ItemDetailContainer';
-import CartContainer from './Containers/CartContainer';
-import Footer from './Components/Footer'
+import HomeContainer from './containers/HomeContainers';
+import ShopContainer from './containers/ShopContainer';
+import ItemDetailContainer from './containers/ItemDetailContainer';
+import CartContainer from './containers/CartContainer';
+import Footer from './components/Footer';
 import CartContext from './Context/CartContex';
 
 

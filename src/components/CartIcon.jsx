@@ -1,6 +1,6 @@
 import React from 'react';
 import {useContext, useEffect, useState} from 'react';
-import { Context } from './Context/CartContext';
+import { Context } from '../Context/CartContex';
 
 const CartIcon = () => {
    
@@ -23,6 +23,6 @@ const CartIcon = () => {
 			    <i className="fas fa-shopping-cart"></i>
 	    </a>
     );
-}
+};
 
 export default CartIcon;

@@ -1,9 +1,9 @@
 import React, {useState,useEffect} from 'react';
 import { useContext } from 'react';
-import { Context } from '../contex/CartContex';
+import { Context } from '../Context/CartContex';
 import { Link } from 'react-router-dom';
 import { getFirestore } from '../firebase/firebase';
-import * as firebase from 'firebase/app';
+import firebase from 'firebase/app';
 import '@firebase/firestore';
 
 const Cart = () => {
