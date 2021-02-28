@@ -1,12 +1,5 @@
 
 import React from "react";
-
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import NavbarComponent from './components/NavBar';
-import FooterComponent from './components/Footer';
-import ItemListContainer from './containers/ItemListContainer';
-
 import {Switch , Route, BrowserRouter} from 'react-router-dom';
 import NavBar from './components/NavBar';
 import Home from './components/Home';
@@ -18,6 +11,7 @@ import ItemDetailContainer from './containers/ItemDetailContainer';
 import CartContainer from './containers/CartContainer';
 import Footer from './components/Footer';
 import CartContext from './Context/CartContex';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {

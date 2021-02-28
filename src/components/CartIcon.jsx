@@ -1,7 +1,7 @@
 import React from 'react';
 import {useContext, useEffect, useState} from 'react';
 import { Context } from '../Context/CartContex';
-
+import ShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 const CartIcon = () => {
    
     const [selectedItems] = useContext(Context);
@@ -20,7 +20,7 @@ const CartIcon = () => {
     return (
         <a className="nav-link" href="#">
           <span className="badge badge-pill badge-light">{amount}</span>
-			    <i className="fas fa-shopping-cart"></i>
+          <ShoppingCartIcon color="secondary" fontSize="large"/>
 	    </a>
     );
 };

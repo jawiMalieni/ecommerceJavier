@@ -4,7 +4,7 @@ import { Context } from '../Context/CartContex';
 import { Link } from 'react-router-dom';
 import { getFirestore } from '../firebase/firebase';
 import firebase from 'firebase/app';
-import '@firebase/firestore';
+import 'firebase/firestore';
 
 const Cart = () => {
     
@@ -47,7 +47,7 @@ const Cart = () => {
 
             const newOrder = {
                 buyer: {
-                    name: document.getElementById('form-name').value,
+                    Name: document.getElementById('form-name').value,
                     phone: document.getElementById('form-phone').value,
                     email: document.getElementById('form-email').value,
                     address: document.getElementById('form-address').value
@@ -91,7 +91,7 @@ const Cart = () => {
 
     return (
         <div className='col-12 text-center mt-3 cart_container'>
-            <h3>Cart</h3>
+            <h3>Tu Carrito</h3>
             {selectedItems.length > 0 ? selectedItems.map((item) => (
                     <div className='mt-4'>
                         <div className='d-flex flex-row justify-content-around'>
@@ -103,7 +103,7 @@ const Cart = () => {
                         <hr></hr>
                     </div>
                 )): <div className='col-12 text-center empty_cart-container'>
-                     <h3>no tienes productos</h3> 
+                     <h3>o tienes productos</h3> 
                     <Link to={`/shop`}>Volver a la tienda</Link>
                     </div>
             }

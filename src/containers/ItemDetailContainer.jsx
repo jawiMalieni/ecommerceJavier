@@ -13,8 +13,8 @@ const ItemDetailContainer = () => {
     useEffect(()=>{
         setLoading(true);
         const db = getFirestore();
-        const productsCollection = db.collection('products');
-        const product = productsCollection.doc(id); 
+        const ItemCollection  = db.collection('Items');
+        const product = ItemCollection.doc(id); 
         
         product.get().then((doc) => {
             if (!doc.exists) {
@@ -36,7 +36,7 @@ const ItemDetailContainer = () => {
     return (
         <div className='row justify-content-center'>
             {
-                Loading && <h4>Cargando...</h4>
+                Loading && <h4>Aguarda que estamos procesando tu pedido...</h4>
             }
                <ItemDetail item={itemSelected}/>
         </div>

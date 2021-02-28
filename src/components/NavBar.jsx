@@ -11,7 +11,7 @@ const NavBar = () => {
 	return (
 		<nav className="navbar navbar-expand-lg navbar-dark shadow col-12">
 			<a className="navbar-brand">
-			 <Link to={`/`}>FullMoon</Link>
+			 <Link to={`/`}>Mike M</Link>
 			</a>
 			<button
 				className="navbar-toggler"
@@ -27,7 +27,7 @@ const NavBar = () => {
 			<div className="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
 				<div className="navbar-nav">
 					<a className="nav-link">
-					   <Link to={`/`}>HOME</Link><span className="sr-only">(current)</span>
+					   <Link to={`/`}>Home</Link><span className="sr-only">(current)</span>
 					</a>
 					<a className="nav-link" href="#">
 						Sobre Nosotros
@@ -36,7 +36,7 @@ const NavBar = () => {
 						<Link to={`/shop`}>Tienda</Link>
 					</a>
                     <a className="nav-link" href="#">
-                        CONTACTO
+                        Contacto
 					</a>
 					<Link to={`/cart`}>
 					  <CartIcon />

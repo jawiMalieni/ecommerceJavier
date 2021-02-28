@@ -9,8 +9,8 @@ const ItemListContainer = () => {
     useEffect(() => {
         setLoading(true);
         const db = getFirestore();
-        const productCollection = db.collection('products');
-        productCollection.get().then((querySnapshot) => {
+        const ItemCollection = db.collection('items');
+        ItemCollection.get().then((querySnapshot) => {
             if(querySnapshot.size === 0) {
                 return (
                     <h2>Estamos cargando los productos. Por favor regresa mas tarde!</h2>
@@ -32,7 +32,7 @@ const ItemListContainer = () => {
             <div className='col-12 mt-4'>
                 <h3>Buzos con capucha</h3>
                 {
-                    loading && <h4>cargando...</h4>
+                    loading && <h4>Aguarda que estamos procesando tu pedido...</h4>
                 }
             </div>
                 {products.length && products.map(product => (
