@@ -1,4 +1,5 @@
-import React, {useState, useEffect} from 'react';
+import React, {useContex, useState, useEffect} from 'react';
+import {link} from 'react-router-dom';
 import Item from '../components/Item';
 import { getFirestore } from '../firebase/firebase';
 
@@ -9,7 +10,7 @@ const ItemListContainer = () => {
     useEffect(() => {
         setLoading(true);
         const db = getFirestore();
-        const ItemCollection = db.collection('items');
+        const ItemCollection = db.Collection('products');
         ItemCollection.get().then((querySnapshot) => {
             if(querySnapshot.size === 0) {
                 return (
@@ -21,7 +22,7 @@ const ItemListContainer = () => {
                 id: doc.id
             })));
         }).catch((error) => {
-            console.log('Error searching products', error);
+            console.log('Error searching product', error);
         }).finally(() => {
             setLoading(false);
         });
