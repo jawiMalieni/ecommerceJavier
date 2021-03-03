@@ -7,7 +7,7 @@ import firebase from 'firebase/app';
 import 'firebase/firestore';
 
 const Cart = () => {
-    
+     
     const [selectedItems, setSelectedItems] = useContext(Context);
     const [amount, setAmount] = useState(0);
     const [total, setTotal] = useState(0);

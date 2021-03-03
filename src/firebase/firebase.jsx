@@ -13,9 +13,10 @@ const app = firebase.initializeApp = ({
 });
 
 
-export const getFirebase = () => {
+export function getFirebase() {
     return app;
 }
-export const getFirestore = () => {
+
+export function getFirestore() {
     return firebase.firestore(app);
 }

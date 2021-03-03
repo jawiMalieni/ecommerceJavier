@@ -1,5 +1,5 @@
 import React from 'react';
-import Brands from '../components/brans';
+import Brands from '../components/Brans';
 
 const BrandsContainer = () => {
     return (

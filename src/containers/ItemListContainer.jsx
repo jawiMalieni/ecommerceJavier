@@ -10,8 +10,8 @@ const ItemListContainer = () => {
     useEffect(() => {
         setLoading(true);
         const db = getFirestore();
-        const ItemCollection = db.Collection('products');
-        ItemCollection.get().then((querySnapshot) => {
+        const itemCollection = db.collection("ItemCollection");
+        itemCollection.get().then((querySnapshot) => {
             if(querySnapshot.size === 0) {
                 return (
                     <h2>Estamos cargando los productos. Por favor regresa mas tarde!</h2>
