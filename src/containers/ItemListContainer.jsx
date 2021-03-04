@@ -1,5 +1,4 @@
-import React, {useContex, useState, useEffect} from 'react';
-import {link} from 'react-router-dom';
+import React, {useState, useEffect} from 'react';
 import Item from '../components/Item';
 import { getFirestore } from '../firebase/firebase';
 
@@ -10,8 +9,8 @@ const ItemListContainer = () => {
     useEffect(() => {
         setLoading(true);
         const db = getFirestore();
-        const itemCollection = db.collection("ItemCollection");
-        itemCollection.get().then((querySnapshot) => {
+        const productsCollection = db.collection("products");
+        productsCollection.get().then((querySnapshot) => {
             if(querySnapshot.size === 0) {
                 return (
                     <h2>Estamos cargando los productos. Por favor regresa mas tarde!</h2>

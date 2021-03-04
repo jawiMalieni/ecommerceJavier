@@ -13,8 +13,8 @@ const ItemDetailContainer = () => {
     useEffect(()=>{
         setLoading(true);
         const db = getFirestore();
-        const itemCollection  = db.collection("ItemCollection");
-        const product = itemCollection.doc(id); 
+        const productsCollection  = db.collection("products");
+        const product = productsCollection.doc(id); 
         
         product.get().then((doc) => {
             if (!doc.exists) {
