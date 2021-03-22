@@ -9,7 +9,7 @@ const ItemListContainer = () => {
     useEffect(() => {
         setLoading(true);
         const db = getFirestore();
-        const productsCollection = db.collection("products");
+        const productsCollection = db.collection("products");         
         productsCollection.get().then((querySnapshot) => {
             if(querySnapshot.size === 0) {
                 return (

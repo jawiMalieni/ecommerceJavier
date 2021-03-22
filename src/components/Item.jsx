@@ -8,8 +8,8 @@ const Item = ({price, image, id}) => {
         <div className="card col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <img src={image} className="card-img-top img-fluid" alt="product picture"></img>
             <div className="card-body">
-               <p className="card-text">{price}$</p>
-               <a className="btn"> <Link to={`/item/${id}`}>Ver mas</Link></a>
+               <p className="card-text">${price}</p>
+               <a className="btn"> <Link to={`/item/${id}`}>Ver</Link></a>
             </div>
         </div>
     );

@@ -38,8 +38,8 @@ const NavBar = () => {
                     <a className="nav-link" href="#">
                         Contacto
 					</a>
-					<Link to={`/cart`}>
-					  <CartIcon />
+					<Link className="nav-link" to={`/cart`}>
+					  <CartIcon />Toca para ver tu pedido
 					</Link>
 					
 				</div>

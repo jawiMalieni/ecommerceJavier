@@ -13,7 +13,7 @@ export default function ItemDetail ({item}) {
             <div className="card-body">
               <h5 className="card-title">{item.data.name}</h5>
               <h6>{item.data.description}</h6>
-              <p className="card-text mt-2">{item.data.price}$</p>
+              <p className="card-text mt-2">${item.data.price}</p>
               <ItemCount max="10" min="1" imagen={item.data.image} price={item.data.price} title={item.data.name}/>
             </div>
             </div>)

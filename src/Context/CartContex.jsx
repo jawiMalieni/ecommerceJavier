@@ -11,7 +11,7 @@ const CartContext = (props) => {
         <Context.Provider value={[selectedItems, setSelectedItems]}>
             {props.children}
         </Context.Provider>
-    )
-}
+    ); 
+};
 
 export default CartContext;
