@@ -98,18 +98,18 @@ const Cart = () => {
                         <h3 className='itemTitle'>{item.title}</h3>
                         <h4>{item.price}$</h4>
                         <p className='badge'>{item.inCart}</p>
-                        <button onClick={Reload} > carrito vacio </button>
+                        <button onClick={Reload} > Vaciar carrito  </button>
                     </div>
                     <hr></hr>
                 </div>
             )) : <div className='col-12 text-center empty_cart-container'>
-                <h3>o tienes productos</h3>
+                <h3>No tienes productos</h3>
                 <Link to={`/shop`}>Volver a la tienda</Link>
             </div>
             }
             <div className='row'>
                 <div className='col-12 checkout_container mb-4'>
-                    <h3>Revisar</h3>
+                    <h3>Completa para finalizar la compra</h3>
                     <form>
                         <input className="form-control mb-1" id="form-name" type="text" placeholder="Name" />
                         <input className="form-control mb-1" id="form-phone" type="tel" placeholder="Phone" />
